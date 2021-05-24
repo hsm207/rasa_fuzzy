@@ -94,8 +94,8 @@ class EntityTypoFixer(EntityExtractor):
 
         if self.entities:
             file_name = file_name + ".json"
-            entity_files = os.path.join(model_dir, file_name)
-            write_json_to_file(entity_files, self.entities)
+            entity_file = os.path.join(model_dir, file_name)
+            write_json_to_file(entity_file, self.entities)
 
             return {"file": file_name}
         else:
